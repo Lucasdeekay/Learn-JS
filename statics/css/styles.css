@@ -1,0 +1,228 @@
+*{
+    border: 0;
+}
+body{
+    background-color: darkred;
+    color: white;
+    text-align: center;
+}
+.container{
+    text-align: center;
+    background-color: rgb(70, 52, 52);
+    border-right: 0;
+    max-width: 400px;
+    margin: auto;
+    padding-bottom: 20px;
+    border-style: double;
+    border-color: green;
+    border-radius: 10%;
+}
+.blackjack-container{
+    text-align: center;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    max-width: 800px;
+    border: 2px;
+    border-style: solid;
+}
+.blackjack-flexbox1{
+    display: flex;
+    justify-content: center;
+    border: 1px;
+    border-style: solid;
+    text-align: center;
+}
+.blackjack-flexbox1 img{
+    width: 85px;
+    height: 85px;
+    padding: 0;
+    margin: 0 auto;
+}
+.blackjack-flexbox2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+    height: 40px;
+    max-height: fit-content;
+    border: 0.5px;
+    border-style: solid;
+    border-color: black;
+    background-color: rgb(3, 88, 3);
+    color: white;
+    text-align: center;
+    margin: 3px;
+    align-content: space-around;
+}
+.blackjack-flexbox3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+    height: 300px;
+    border: 0.5px;
+    border-style: solid;
+    border-color: black;
+    background-color: rgb(3, 88, 3);
+    color: white;
+    text-align: center;
+}
+.output-container{
+    text-align: left;
+    max-width: 200px;
+    margin: auto;
+    background-color: rgb(36, 16, 102);
+    border-radius: 10%;
+}
+.main-header{
+    color: white;
+    text-decoration: dotted;
+}
+.form-prompt{
+    border: 50px;
+    padding: 2px;
+}
+.button{
+    padding: 5px;
+    border-radius: 20%;
+    text-transform: uppercase;
+    font-family: cursive;
+    text-align: right;
+}
+input, select{
+    padding: 10px;
+    border-radius: 15%;
+    background-color: darkorange;
+    color: white;
+}
+select{
+    padding: 5px;
+}
+.blue{
+    background-color: blue;
+    color: white;
+}
+.blueviolet{
+    background-color: blueviolet;
+}
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+    color: black;
+}
+.green{
+    background-color: green;
+}
+.brown{
+    background-color: brown;
+    color: white;
+}
+.black{
+    background-color: black;
+    color: white;
+}
+.button.black:hover, .blackjack-button:hover{
+    background-color: grey;
+}
+.form-output{
+    font-family: cursive;
+    font-weight: 400;
+    font-size: small;
+    color: coral;
+    padding: 20px;
+    text-align: left;
+    margin-top: 20px;
+    border-radius: 10%;
+}
+.spacing{
+    padding-top: 5px;
+}
+.flex-box-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+img{
+    margin: 10px;
+}
+.flex-box-container img{
+    width: 100px;
+    height: 100px;
+    box-shadow: 2px 2px 5px 5px grey;
+}
+.add-spacing{
+    padding-bottom: 10px;
+}
+.space-item{
+    margin: 0px auto;
+}
+.blackjack-button{
+    padding: 10px;
+    border-style: double;
+    border-radius: 20%;
+    text-transform: uppercase;
+    text-align: right;
+    margin: 10px 5px;
+    border-color: white;
+    font-weight: 900;
+    font-style: italic;
+}
+table, th, td {
+    border: 1px solid white;
+    padding: 5px;
+ }
+.table-div{
+     padding: 10px;
+ }
+ .box-shadow{
+    box-shadow: 2px 2px 5px 5px blue;
+ }
+
+ @keyframes myAnim {
+    0% {
+      animation-timing-function: ease-in;
+      opacity: 1;
+      transform: translateY(-45px);
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    40% {
+      animation-timing-function: ease-in;
+      transform: translateY(-24px);
+    }
+  
+    65% {
+      animation-timing-function: ease-in;
+      transform: translateY(-12px);
+    }
+  
+    82% {
+      animation-timing-function: ease-in;
+      transform: translateY(-6px);
+    }
+  
+    93% {
+      animation-timing-function: ease-in;
+      transform: translateY(-4px);
+    }
+  
+    25%,
+    55%,
+    75%,
+    87% {
+      animation-timing-function: ease-out;
+      transform: translateY(0px);
+    }
+  
+    100% {
+      animation-timing-function: ease-out;
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }

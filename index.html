@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="statics\css\styles.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    
+    <!--Collect Personal Information-->
+    <section class="container">
+        <div class="main-header">
+            <h1>Personal Info</h1>
+        </div>
+    
+        <form id="form">
+            <div class="form-prompt">
+                <input type="text" id="first-name" placeholder="Enter First Name...">
+            </div>
+            <div class="form-prompt">
+                <input type="text" id="last-name"  placeholder="Enter Last Name...">
+            </div>
+            <div class="form-prompt">
+                <input type="number" id="age" placeholder="Enter Age...">
+            </div>
+            <div>
+                <input type="submit" value="submit" id="button" class="button">
+            </div>
+    
+            <div class="form-output output-container" id="message"></div>
+        </form>
+    
+    </section>
+    
+    <!--Weight Converter-->
+    <section class="container">
+        <div class="main-header">
+            <h1>Weight Converter</h1>
+        </div>
+    
+        <div>
+            <input type="number" id="weightInput" placeholder="Enter Weight...">
+            <span>
+                <select id="weightUnit">
+                    <option value="">Unit</option>
+                    <option value="Pounds">Lbs</option>
+                    <option value="Kilogram">Kg</option>
+                    <option value="Gramme">Gram</option>
+                </select>
+            </span>
+        </div>
+    
+        <div id="weightOutput" class="form-output output-container">
+            <div>
+                <div class="form-output blue">
+                    <div>Pounds:</div>
+                    <div id="LbsOutput"></div>
+                </div>
+                <div class="form-output green">
+                    <div>Kilogram:</div>
+                    <div id="KgOutput"></div>
+                </div>
+                <div class="form-output brown">
+                    <div>Gram:</div>
+                    <div id="GramOutput"></div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+    <!--Age To Days Converter-->
+    <section class="container">
+        <div>
+            <h1>Age-To-Days Converter</h1>
+        </div>
+        <div>
+            <input type="number" placeholder="Enter Age..." id="ageInput">
+        </div>
+        <div class="spacing">
+            <button type="button" id="submitButton" class="button brown">CONVERT</button>
+        </div>
+    
+        <div id="resultOutput" class="form-output output-container"></div>
+    </section>
+    
+    <!--Image Generator-->
+    <section class="container">
+        <div>
+            <h1>Image Generator</h1>
+        </div>
+        <div>
+            <button type="button" class="button black" id="genButton">GENERATE IMAGE</button>
+            <button type="button" class="button blueviolet" id="resetButton">RESET</button>
+        </div>
+
+        <div class="flex-box container" id="imageOutput"></div>
+    </section>
+
+    <!--Rock Paper Scissors-->
+    <section class="container">
+        <div>
+            <h1>Rock Paper Scissors</h1>
+        </div>
+        <div class="flex-box-container" id="myRPSInputs">
+            <span>
+                <img src="statics\image\IMG_20200904_121236_925.jpg" alt="rock">
+                <div>
+                    <button type="button" id="rock" class="button black" onclick="getRPSWinner(this)">ROCK</button>
+                </div>
+            </span>
+            <span style="animation: myAnim 2s ease 0s infinite normal forwards;" >  
+                <img src="statics\image\IMG_20200904_121016_260.jpg" alt="paper">
+                <div>
+                    <button type="button" id="paper" class="button black" onclick="getRPSWinner(this)">PAPER</button>
+                </div>
+            </span>
+            <span>
+                <img src="statics\image\IMG_20200904_121057_193.jpg" alt="scissors">
+                <div>
+                    <button type="button" id="scissors" class="button black" onclick="getRPSWinner(this)">SCISSORS</button>
+                </div>
+            </span>
+        </div>
+    
+        <div id="rpsOutputMain">
+            <div class="flex-box-container">
+                <span class="img" id="rpsOutput1">
+                    <div id="playerScore"></div>
+                </span>
+                <span id="rpsMessage"></span>
+                <span class="img" id="rpsOutput2">
+                    <div id="computerScore"></div>
+                </span>
+            </div>
+            
+        </div>
+    </section>
+
+    <!--Change Button Colors-->
+    <section class="container">
+        <div>
+            <h1>Change Button Colors</h1>
+        </div>
+
+        <div class="flex-box-container">
+            <form class="add-spacing" >
+                <select name="btnChangeOption" id="btnChangeOperation" onchange="changeButtonColors(this)">
+                    <option value="">Color Buttons</option>
+                    <option value="blueviolet">Blue-violet</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="random">Random</option>
+                    <option value="reset">Reset</option>
+                </select>
+            </form>
+    
+            <div>
+                <button class="button grey" id="twitter">Twitter</button>
+                <button class="button red" id="youtube">Youtube</button>
+                <button class="button blue" id="facebook">Facebook</button>
+                <button class="button green" id="whatsapp">Whatsapp</button>
+            </div>
+        </div>
+    </section>
+
+    <!--Blackjack-->
+    <section class="blackjack-container">
+        <div>
+            <h1>BLACKJACK</h1>
+            <div id="gameMessage"></div>
+        </div>
+
+        <div class="blackjack-flexbox1">
+            <div class="blackjack-flexbox2">
+                <h2>YOU:</h2>
+                <span id="userScore"></span>
+            </div>
+            <div class="blackjack-flexbox2">
+                <h2>DEALER:</h2>
+                <span id="dealerScore"></span>
+            </div>
+        </div>
+
+        <div class="blackjack-flexbox1">
+            <div class="blackjack-flexbox3" id="userBox"></div>
+            <div class="blackjack-flexbox3" id="dealerBox"></div>
+        </div>
+
+        <div class="blackjack-flexbox1">
+            <button class="blackjack-button blue" id="hitButton">HIT</button>
+            <button class="blackjack-button yellow" id="standButton">STAND</button>
+            <button class="blackjack-button red" id="dealButton">DEAL</button>
+        </div>
+
+        <div class="blackjack-flexbox1 table-div">
+            <table>
+                <tr>
+                    <th>WINS</th>
+                    <th>DRAWS</th>
+                    <th>LOSSES</th>
+                </tr>
+                <tr>
+                    <td id="wins"></td>
+                    <td id="draws"></td>
+                    <td id="losses"></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <script src="statics\js files\demo.js"></script>
+    <script src="statics\js files\index.js"></script>
+    <script src="statics\js files\ageToDays.js"></script>
+    <script src="statics\js files\imageGen.js"></script>
+    <script src="statics\js files\rockPaperScissors.js"></script>
+    <script src="statics\js files\weightConverter.js"></script>
+    <script src="statics\js files\changeBtnColors.js"></script>
+    <script src="statics\js files\blackjack.js"></script>
+</body>
+</html>
